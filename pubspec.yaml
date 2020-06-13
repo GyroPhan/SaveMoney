@@ -23,6 +23,7 @@ dependencies:
   hexcolor: ^1.0.2
   intl: ^0.16.1
   lite_rolling_switch: ^0.1.1
+  path_provider:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

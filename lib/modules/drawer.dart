@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import '../constans.dart';
 import '../screens/homeScreen.dart';
 import '../screens/saveMoneyScreen.dart';
@@ -36,6 +37,7 @@ class DrawerIcon extends StatelessWidget {
       child:Image.asset(
         'assets/icons/menu.png',
         width: 40,
+        color: Hexcolor('#FFCD46'),
       ),
     );
   }

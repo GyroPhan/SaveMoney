@@ -7,19 +7,19 @@ import 'package:intl/intl.dart';
 
 import '../constans.dart';
 import '../datas/DATA_KHOAN_TIEN.dart';
-import '../models/khoanTien.dart';
+import '../models/khoanChiCoDinh.dart';
 import '../modules/drawer.dart';
 import '../modules/chiTieuItem.dart';
 
-class AddChiTieu extends StatefulWidget {
+class AddKhoanChiCoDinh extends StatefulWidget {
   @override
-  _AddChiTieuState createState() => _AddChiTieuState();
+  _AddKhoanChiCoDinhState createState() => _AddKhoanChiCoDinhState();
 }
 
-class _AddChiTieuState extends State<AddChiTieu> {
+class _AddKhoanChiCoDinhState extends State<AddKhoanChiCoDinh> {
   String _txtTieuDe = '';
   int _txtSoTien = 0;
-  bool _thuChi = false;
+
   final controllerTieuDe = TextEditingController();
   final controllerSoTien = TextEditingController();
 
@@ -85,21 +85,7 @@ class _AddChiTieuState extends State<AddChiTieu> {
         SizedBox(
           height: 20,
         ),
-        LiteRollingSwitch(
-          //initial value
-          value: true,
-          textOn: '  Chi',
-          textOff: 'Thu  ',
-          colorOn: Colors.redAccent[700],
-          colorOff: Colors.greenAccent[700],
-          iconOn: Icons.remove_circle_outline,
-          iconOff: Icons.done,
-          textSize: 16.0,
-          onChanged: (bool aaaa) {
-            this._thuChi = aaaa;
-            print('Current State of SWITCH IS: ${this._thuChi}');
-          },
-        ),
+
         Container(
           margin: EdgeInsets.only(top: 20),
           decoration: BoxDecoration(
@@ -109,21 +95,17 @@ class _AddChiTieuState extends State<AddChiTieu> {
           child: FlatButton(
             child: Text('ADD'),
             onPressed: () {
-              var newKhoanTien = KhoanTien(
+              var newKhoanChiCoDinh = KhoanChiCoDinh(
                 id: Random().nextInt(1000),
                 tieuDe: _txtTieuDe,
                 soTien: _txtSoTien,
-                dcXai: _thuChi,
-                ngayTao: DateTime.now(),
               );
-
               setState(() {
-                KHOAN_TIEN.add(newKhoanTien);
+                KHOAN_CHI_CO_DINH.add(newKhoanChiCoDinh);
                 controllerTieuDe.text = '';
                 controllerSoTien.text = '';
                 _txtSoTien = 0;
                 _txtTieuDe = '';
-
                 Navigator.pop(context);
               });
             },

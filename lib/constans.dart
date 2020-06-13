@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 
-const kBackgroundColor = Color.fromRGBO(250, 232, 232,0.3);
-const kChiColor =  Color.fromRGBO(217, 96, 87,1);
-const kThuColor = Color.fromRGBO(93, 212, 115,1);
+final kBackgroundColor = Hexcolor('#243665');
+final kChiColor =  Hexcolor('#FF5C70');
+final kThuColor = Hexcolor('#45FFBE');
 
 
 const kInfoTextStyle = TextStyle(

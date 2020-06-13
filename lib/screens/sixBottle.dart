@@ -37,7 +37,6 @@ class _SixBottleState extends State<SixBottle> {
               width: size.width * .9,
               height: 60,
               padding: EdgeInsets.only(right: 20),
-              alignment: Alignment.centerRight,
               margin: EdgeInsets.only(top: 20),
               decoration: BoxDecoration(
                 border: Border.all(width: 1),
